@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/* YOUR TARGET METHOD IS:
+/* YOUR TARGET METHOD IS: contains(int item) 
  *
  * FINAL EXAM NON-CODING ANSWERS
  ********************************************************
