@@ -62,6 +62,8 @@ ANSWER HERE:
 *     State the condition under which the exceptions should be
 *     thrown.
 ANSWER HERE:
+* 1: the NullPointerException should be placed in the containsHelper method as the nodes should not be null
+* 2: the IndexOutOfBoundsException should be placed in the extendNodes as the extend should be larger than 0
 
 
 * 5b. Implement the exceptions you suggested.
@@ -140,6 +142,26 @@ class Tests {
         heap.add(2,3);
         heap.remove(2);
         assertFalse(heap.contains(2), "does not return false when item is removed");
+    }
+
+    @Test
+    void nodeIsNull() {
+        try{
+            TrinaryHeap.IntNode[] nodes = null;
+            heap.containsHelper(3, 3);
+        }catch (NullPointerException e){
+            assertEquals(e.getMessage(), "nodes is null");
+        }
+    }
+
+    @Test
+    void extendLessThanZero(){
+        int extend = -1;
+        try{
+            heap.extendNodes(extend);
+        }catch (IndexOutOfBoundsException e){
+            assertEquals(e.getMessage(), "extend is less than zero");
+        }
     }
 
 }

@@ -110,6 +110,9 @@ public class TrinaryHeap {
   /* This method extends the array of nodes by the specified amount.
    */
   public void extendNodes(int extend) {
+    if (extend < 0){
+      throw new IndexOutOfBoundsException("extend is less than zero");
+    }
     assert nodes != null: "nodes is null";
     IntNode[] prevNodes = nodes;
     nodes = new IntNode[capacity + extend];
@@ -146,6 +149,9 @@ public class TrinaryHeap {
    * Returns true if and only if the subtree at the specified index contains the specified item.
    */
   public boolean containsHelper(int item, int index) {
+    if (nodes == null){
+      throw new NullPointerException("nodes is null");
+    }
     if (index >= size) {
       return false;
     }
