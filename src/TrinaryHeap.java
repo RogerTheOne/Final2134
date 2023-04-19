@@ -44,7 +44,7 @@ public class TrinaryHeap {
   }
 
   public int capacity = 10;
-  public IntNode[] nodes;
+  public IntNode[] nodes = new IntNode[capacity];
   public int size = 0;
 
   /* Empty constructor. Creates an empty heap.

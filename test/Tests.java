@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /* YOUR TARGET METHOD IS: contains(int item) 
@@ -94,8 +96,28 @@ class Tests {
      *
      * All tests for all source files should be placed here.
      */
-    @Test
-    void test() {
 
+
+    // ... (previous test cases)
+    TrinaryHeap heap = new TrinaryHeap();
+    @Test
+    void actuallyContains() {
+        heap.add(2, 3);
+        heap.add(3, 4);
+
+        assertTrue(heap.contains(3), "does not return true when the heap contains the item");
+        assertTrue(heap.contains(4), "does not return true when the heap contains the item");
     }
+
+    @Test
+    void notContains(){
+        heap.add(2,3);
+        assertFalse(heap.contains(4), "does not return false when the heap does not contains the item");
+    }
+
+    @Test
+    void heapNull(){
+        assertFalse(heap.contains(3), "does not return false when the heap is null");
+    }
+
 }
