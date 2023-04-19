@@ -110,6 +110,11 @@ ANSWER HERE:
 *    SOLID: Single responsibility principle
 *    class interface refactoring
 *    Collapse the superclass and subclass
+* 4: class look like they may need to be modified and it seems hard to do so
+*    location: TrinaryHeap
+*    Open/Close principle
+*    class interface refactoring
+*    use the most general supertype possible in the interface
 
 
 *******************************************************
