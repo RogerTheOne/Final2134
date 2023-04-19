@@ -34,8 +34,8 @@ public class TrinaryHeap {
    * The item is the data stored in the node.
    */
   public static class IntNode {
-    public int priority;
-    public int item;
+    private int priority;
+    private int item;
 
     public IntNode(int priority, int item) {
       this.priority = priority;
@@ -43,26 +43,15 @@ public class TrinaryHeap {
     }
   }
 
-  public int capacity = 10;
-  public IntNode[] nodes = new IntNode[capacity];
-  public int size = 0;
+  private int capacity = 10;
+  private IntNode[] nodes = new IntNode[capacity];
+  private int size = 0;
 
   /* Empty constructor. Creates an empty heap.
    */
   public TrinaryHeap() {
   }
 
-  /* Constructor that creates a heap from a list of priorities and items.
-   * The items are inserted in the order they appear in the lists.
-   * This means that the heap will not necessarily be stored in the same order
-   * as the lists. If the list of priorities is sorted, the heap will be in the same
-   * order as the list of priorities.
-   */
-  public TrinaryHeap(ArrayList<Integer> priorities, ArrayList<Integer> items) {
-    for (int i = 0; i < priorities.size(); i++) {
-      add(priorities.get(i), items.get(i));
-    }
-  }
 
   /* Constructor that creates a heap from a list of priorities and items.
    * The items are inserted in the order they appear in the lists.
@@ -82,7 +71,7 @@ public class TrinaryHeap {
   public void add(int priority, int item) {
     assert priority >= 0: "priority is less than zero";
     if (size == nodes.length) {
-      extendNodes(10);
+      extendNodes(size);
     }
     IntNode node = new IntNode(priority, item);
     nodes[size] = node;

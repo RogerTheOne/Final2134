@@ -77,6 +77,10 @@ ANSWER HERE:
 *    - the method where the issue is
 *    - how to fix the issue
 ANSWER HERE:
+* 1: magic number; add(); change 10 to size
+* 2: data members are public; the place where variable initialized; change multiple public accessible to private
+* 3: one constructor is intimate to another one; constructor using arraylist; remove one of the constructor
+* 4: comments redundant; the comment above the constructor; remove one of the duplicate comments
 
 
 * 6b. Perform the refactorings on the code.  Be sure to do
@@ -91,6 +95,7 @@ ANSWER HERE:
 *      is needed
 *    - how to fix the issue (note: do not do the refactoring!)
 ANSWER HERE:
+* 
 
 
 *******************************************************
