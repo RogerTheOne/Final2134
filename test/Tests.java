@@ -22,6 +22,9 @@ import static org.junit.jupiter.api.Assertions.*;
  * 2a. Give three (3) test cases for the TARGET method (see above)
  *     Each test case should be one line long.
  ANSWER HERE:
+ * 1. actuallyContains: @description: This method will return true if the heap contains the specific item, @result: return true
+ * 2. notContains: @description: This method will return false if the heap does not contain the item, @result: return false
+ * 3. heapNull: @: This method will return false when the heap is empty, @result: return false
 
 
  * 2b. Implement the unit tests below (after all these comments).
