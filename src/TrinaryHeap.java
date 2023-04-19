@@ -146,7 +146,7 @@ public class TrinaryHeap {
       return false;
     }
     if (nodes[index].item == item) {
-      return false;
+      return true;
     }
     // target may be in one of the children
     int child1 = 3 * index + 1;

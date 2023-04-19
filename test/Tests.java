@@ -39,6 +39,9 @@ import static org.junit.jupiter.api.Assertions.*;
  *    - method where the bug occurs
  *    - how you fixed the problem
 ANSWER HERE:
+* @description: the actuallyContains should be returned true instead of false
+* @Location: containsHelper()
+* @Fixed: change return false to true when nodes[index].item == item which means item is found in the node
 
 
 * 4a.  Identify three (3) locations in the code where assertions
@@ -118,6 +121,22 @@ class Tests {
     @Test
     void heapNull(){
         assertFalse(heap.contains(3), "does not return false when the heap is null");
+    }
+
+    @Test
+    void itemWithSameIndex(){
+        heap.add(2,3);
+        heap.add(2,4);
+
+        assertTrue(heap.contains(4), "does not return true when two item placed in same index");
+        assertTrue(heap.contains(3), "does not return true when two item placed in same index");
+    }
+
+    @Test
+    void containsAndRemove(){
+        heap.add(2,3);
+        heap.remove(2);
+        assertFalse(heap.contains(2), "does not return false when item is removed");
     }
 
 }
