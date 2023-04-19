@@ -80,6 +80,7 @@ public class TrinaryHeap {
    * and then moved up the tree until it is in the correct position.
    */
   public void add(int priority, int item) {
+    assert priority >= 0: "priority is less than zero";
     if (size == nodes.length) {
       extendNodes(10);
     }
@@ -103,15 +104,18 @@ public class TrinaryHeap {
     nodes[size] = null;
     trickleDown(0);
     return root.item;
+
   }
 
   /* This method extends the array of nodes by the specified amount.
    */
   public void extendNodes(int extend) {
+    assert nodes != null: "nodes is null";
     IntNode[] prevNodes = nodes;
     nodes = new IntNode[capacity + extend];
     capacity = capacity + extend;
     for (int i = 0; i < prevNodes.length; i++) {
+      assert prevNodes.length > 0: "the length of prevNodes less than zero";
       nodes[i] = prevNodes[i];
     }
   }

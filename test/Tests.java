@@ -49,6 +49,9 @@ ANSWER HERE:
 *      - method where assertion should be used
 *      - what the assertions should assert
 ANSWER HERE:
+* 1: add(); make sure the priority is not less than zero: assert priority >= 0: "priority is less than zero";
+* 2: extendNodes(); make sure the nodes is not null: assert nodes != null: "nodes is null";
+* 3: extendNodes(); make sure the preNodes is larger than zero: assert prevNodes.length > 0: "the length of prevNodes less than zero";
 
 
 * 4b. Write the assertions in the code.
