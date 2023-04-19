@@ -95,7 +95,21 @@ ANSWER HERE:
 *      is needed
 *    - how to fix the issue (note: do not do the refactoring!)
 ANSWER HERE:
-* 
+* 1: there are overriding methods in the TrinarySet Class, and we can initialize the data at the superclass
+*    location: two add method is TrinarySet.java
+*    no Solid principle are violated
+*    class implementation refactoring
+*    initialized the data and write the two method in the superclass, use the method in subclass
+* 2: there are duplicate data initialize in subclass
+*    location: two variables in subclass
+*    no solid
+*    class implementation refactoring
+*    Pull a method and variable into the superclass
+* 3: the implementation of the subclass is similar to the superclass
+*    location: TrinarySet.java
+*    SOLID: Single responsibility principle
+*    class interface refactoring
+*    Collapse the superclass and subclass
 
 
 *******************************************************
